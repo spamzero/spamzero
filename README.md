@@ -49,7 +49,7 @@ var rules = [
   * @return {Boolean}
   */
   function(m, raw) {
-    "Goomoji + name in subject" <-- This is a comment that will show up in the logs to help you with debugging
+    "Goomoji + name in subject" // <-- This is a comment that will show up in the logs to help you with debugging
     return StringHelper.containsGoomoji(raw.headers.subject) && raw.headers.subject.match(/john.doe/i);
   },
   
