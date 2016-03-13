@@ -83,7 +83,6 @@ var rules = [
   
   function(m, raw) {
     "Has link to dropbox in body"
-    var body = raw.body;
     return raw.body.match(/dl\.dropboxusercontent\.com/i)
   }
 ];
