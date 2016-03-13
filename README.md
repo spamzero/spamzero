@@ -28,6 +28,16 @@ Edit the `actions` array and define what actions you want to take when a rule ma
 var actions = ["READ", "MOVE_TO_TRASH"];
 ```
 
+Currently the following actions are implemented:
+
+```
+READ -> Mark a message as read
+MOVE_TO_TRASH -> Move the message to trash
+LABEL(name) -> Give it a label with a name
+```
+
+It should be quite straightforward to add your own actions.
+
 Add your own custom rules to the `rules` array:
 
 ```javascript
