@@ -1,6 +1,6 @@
 # Spam Zero
 
-Spam Zero is a Google Apps Script that helps minimise the clutter in your Gmail spam folder. It is a single javacript file that you can use as a skeleton for writing your own advanced Gmail rules & actions.
+Spam Zero is a Google Apps Script that helps you to minimise the clutter in your Gmail spam folder. It is a single javacript file that you can use as a skeleton for writing your own advanced Gmail rules & actions.
 
 Gmail is great at filtering spam messages, however sometimes it mistakenly flags a message as spam. Because of this, whenever we see Spam (3) looking at our inbox we always click on it to see if we have any important message hiding within.
 
