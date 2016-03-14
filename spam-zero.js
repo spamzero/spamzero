@@ -101,10 +101,11 @@ var MessageHelper = {
     var attachments = message.getAttachments();
     for (var i = 0; i < attachments.length; i++) {
       if (attachments[i].getContentType().match(/image/)) {
-        withImageAttachment = true;
-        break;
+        return true;
       }
     }
+    
+    return false;
   }
 }
 
