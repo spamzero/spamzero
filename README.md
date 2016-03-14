@@ -41,6 +41,40 @@ It should be quite straightforward to add your own actions.
 Add your own custom rules to the `rules` array:
 
 ```javascript
+/**
+ * Your custom rules that are going to be tested against your messages.
+ *
+ * Each item in the rules array should be a function that takes two parameters.
+ *
+ * The first parameter is a GmailMessage, the second is an Object which contains the message's raw content.
+ *
+ * It has the following structure:
+ *
+ * {
+ *   headers: {
+ *     "from": "From <from@address.com>"
+ *     "to": "to@address.com",
+ *     "subject: "Subject"
+ *     "received": "from some.domain.com ([42.42.42.42]) by mx.google.com...",
+ *     "content-type: "text/html; charset=UTF-8",
+ *     // etc. all other headers are available here that you can see opening up "Show original"
+ *   },
+ *
+ *   body: {
+ *     "<html><body>The body of the message</body></html>"
+ *   }
+ * }
+ *
+ * Return true from your function if you want your selected action(s) to be run on the entire thread.
+ *
+ * You can also add a one line description that will show up in the logs (provided isDebug is true, see below).
+ *
+ * Make sure the description is on the first line between double quotes. No need for trailing semicolons.
+ *
+ * Sample rules are provided below.
+ *
+ * @type {Function[]}
+ */
 var rules = [
   /**
   * @param {GmailMessage}
