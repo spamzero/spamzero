@@ -18,7 +18,7 @@ With Google Apps Scripts it is easy to create a javascript file which lives on y
 
 ## Installation
 
-Open up https://www.google.com/script/start/, click Start Scripting. Once you are logged in to your Google account, you will be presented with the script editor. Remove the default generated function and paste the contents of spam-zero.js into the editor. Most of the code is annotated plus there are sample rules to get you started.
+Open up https://www.google.com/script/start/, click Start Scripting. Once you are logged in to your Google account, you will be presented with the script editor. Remove the default generated function and paste the contents of [spam-zero.js](https://github.com/spamzero/spamzero/blob/master/spam-zero.js) into the editor. Most of the code is annotated plus there are sample rules to get you started.
 
 ## Usage
 
@@ -77,11 +77,11 @@ Add your own custom rules to the `rules` array:
  */
 var rules = [
   /**
-  * @param {GmailMessage}
-  * @param {Object}
-  *
-  * @return {Boolean}
-  */
+   * @param {GmailMessage}
+   * @param {Object}
+   *
+   * @return {Boolean}
+   */
   function(m, raw) {
     "Goomoji + name in subject" // <-- This is a comment that will show up in the logs to help you with debugging
     return StringHelper.containsGoomoji(raw.headers.subject) && raw.headers.subject.match(/john.doe/i);
