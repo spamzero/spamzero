@@ -160,7 +160,7 @@ var StringHelper = {
      */
     containsGoomoji: function(string) {
         // FIXME. This will return true for any non ASCII text
-        return string.match(/=\?UTF-8\?B\?[^\?]+\?=/i);
+        return string.match(/=\?[Uu][Tt][Ff]-8\?[BQ]\?[^\?]+\?=/i);
     }
 };
 
