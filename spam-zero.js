@@ -178,6 +178,16 @@ var getLogger = function() {
     }
 };
 
+// Logger function for Google SpreadSheets
+
+var getSpreadsheetLogger = function() {
+  // put the URL of your Google Sheet below:
+    const SheetURL = "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/edit";
+    var SpreadSheet = SpreadsheetApp.openByUrl(SheetURL);
+
+    SpreadSheet.appendRow([Logger.getLog()])
+}
+
 /**
  * Checks whether the given thread's messages matches any of your rules.
  * Only one message needs to be matched by your rules for this function to return true.
@@ -327,6 +337,8 @@ var runActionsOnThread = function(thread) {
         var action = ActionFactory.create(actions[i]);
         getLogger().log('Running action "' + actions[i] + '"');
         action.run(thread);
+//Record the event to the Spreadsheet:
+        getSpreadsheetLogger()
     }
 };
 
