@@ -1,7 +1,8 @@
 /**
- * Spam Zero 0.0.2
+ * Spam Zero 0.1.0
  *
- * https://github.com/spamzero/spamzero
+ * https://github.com/erichlf/spamzero
+ * forked from https://github.com/spamzero/spamzero
  */
 
 /**
